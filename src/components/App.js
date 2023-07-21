@@ -8,9 +8,10 @@ function App(){
         .then((data) => {setImage(data.message)})
     },[]);
     
+
     return (
         <div>
-            {!image ? <p>Loading...</p>:<img src={image} alt="A Random Dog" />}
+            {!image ? <p>Loading...</p>:<img src={image} alt="A Random Dog"/>}
         </div>
     );
    
