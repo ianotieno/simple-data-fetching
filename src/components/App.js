@@ -7,16 +7,10 @@ function App(){
         .then((r) => r.json())
         .then((data) => {setImage(data.message)})
     },[]);
-    function renderContent() {
-        if (!image) {
-            return <p>Loading...</p>;
-        }
-        return <img src={image} alt="A Random Dog" />;
-    }
-
+    
     return (
         <div>
-            {renderContent()}
+            {!image ? <p>Loading...</p>:<img src={image} alt="A Random Dog" />}
         </div>
     );
    
